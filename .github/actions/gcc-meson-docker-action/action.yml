@@ -7,6 +7,6 @@ inputs:
 
 runs:
     using: 'docker'
-    image: 'Dockerfile'
+    image: 'docker://kariyam/gcc-meson:10.2'
     args:
     - ${{ inputs.path }}
