@@ -11,7 +11,7 @@ jobs:
           path: harmony
 
     - name: run test in docker
-      uses: ./.github/actions/gcc-meson-docker-action
+      uses: ./harmony/.github/actions/gcc-meson-docker-action
       with:
           path: harmony
   
