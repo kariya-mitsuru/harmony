@@ -7,8 +7,13 @@ jobs:
     name: run test
     steps:
     - uses: actions/checkout@v2
+      with:
+          path: harmony
+
     - name: run test in docker
       uses: ./.github/actions/gcc-meson-docker-action
+      with:
+          path: harmony
   
   # MSVC:
   #   runs-on: windows-latest
