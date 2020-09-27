@@ -1,5 +1,12 @@
 name: 'build & test'
 
+inputs:
+    path:
+        description: 'Relative path under $GITHUB_WORKSPACE where the repository is checked out'
+        default: '.'
+
 runs:
     using: 'docker'
     image: 'Dockerfile'
+    args:
+    - ${{ inputs.path }}
